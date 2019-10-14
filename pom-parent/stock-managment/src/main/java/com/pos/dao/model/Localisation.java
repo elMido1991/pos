@@ -1,12 +1,9 @@
 package com.pos.dao.model;
 
 import javax.persistence.Column;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,14 +14,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Stock {
+public class Localisation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private long id;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "STO_ENTREPOT_ID")
-	private Entrepot entrepot;
-	private long articleid;
-	private double quantity;
+	private double attitude;
+	private double longitude;
 }
