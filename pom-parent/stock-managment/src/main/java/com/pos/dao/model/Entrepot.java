@@ -31,7 +31,7 @@ public class Entrepot {
     @JoinColumn(name = "id", referencedColumnName = "id")
 	private Localisation localisation;
 	@OneToMany(
-	        mappedBy = "categorie",
+	        mappedBy = "entrepot",
 	        cascade = CascadeType.ALL,
 	        orphanRemoval = true,
 	        fetch = FetchType.LAZY
