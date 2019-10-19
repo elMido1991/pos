@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +22,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Entity(name="STO_ENTREPORT")
+@Entity
+@Table(name="STO_ENTREPORT")
 public class Entrepot {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
