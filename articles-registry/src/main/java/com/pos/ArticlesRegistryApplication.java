@@ -1,4 +1,4 @@
-package com.pos;
+package com.pos;  
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
