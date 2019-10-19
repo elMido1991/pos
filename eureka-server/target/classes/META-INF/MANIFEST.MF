@@ -5,7 +5,7 @@ Build-Number:
 Built-By: MehdiCS
 Implementation-Vendor-Id: com.pos.parent
 Specification-Title: eureka-server
-Build-Time: 2019-10-19T21:36:21Z
+Build-Time: 2019-10-19T21:51:49Z
 Build-Jdk: 1.8.0_201
 Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
