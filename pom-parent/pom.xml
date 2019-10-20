@@ -48,5 +48,6 @@
 		<module>sales-managment</module>
 		<module>stock-managment</module>
     	<module>pos-ui</module>
-	</modules>
+    <module>client-registry</module>
+  </modules>
 </project>
