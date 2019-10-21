@@ -9,5 +9,5 @@ public interface IEntrepotService {
 	EntrepotDto updateEntrepot(long idEntrepot, EntrepotDto entrepotDto);
 	void deleteEntrepot(long idEntrepot);
 	EntrepotDto getEntrepot(long idEntrepot);
-	Set<EntrepotDto> getEntrepots(long ...idEntrepot);
+	Set<EntrepotDto> getEntrepots(Long ...idEntrepot);
 }
