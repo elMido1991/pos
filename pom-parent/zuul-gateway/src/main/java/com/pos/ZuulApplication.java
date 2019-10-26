@@ -13,7 +13,7 @@ public class ZuulApplication {
 	public static void main(String[] args) {
 		System.out.println("Salam");
 		SpringApplication.run(ZuulApplication.class, args);
-		System.out.println("aurevoir");
+		System.out.println("aurevoir    ");
 	}
 
 }
