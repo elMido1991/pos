@@ -43,6 +43,7 @@ public class EntrepotService implements IEntrepotService{
 		return iEntrepotMapper.mapToDto(iEntrepotRepository.getOne(idEntrepot));
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public Set<EntrepotDto> getEntrepots(Long... idEntrepot) {
 		Set<EntrepotDto> entrepotsDtos = Collections.emptySet();

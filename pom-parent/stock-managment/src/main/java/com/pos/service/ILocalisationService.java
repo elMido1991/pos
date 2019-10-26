@@ -9,5 +9,5 @@ public interface ILocalisationService {
 	LocalisationDto updateLocalisation(long idLocalisation, LocalisationDto LocalisationDto);
 	void deleteLocalisation(long idLocalisation);
 	LocalisationDto getLocalisation(long idLocalisation);
-	Set<LocalisationDto> getLocalisations(long ...idLocalisation);
+	Set<LocalisationDto> getLocalisations(Long ...idLocalisation);
 }
