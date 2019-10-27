@@ -113,33 +113,40 @@ public class EntrepotController implements IEntrepotController {
 	}
 
 	@Override
-	public LocalisationDto addLocalisation(LocalisationDto LocalisationDto) {
-		// TODO Auto-generated method stub
-		return null;
+	@PostMapping(value= "/localisation/add",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "add localisation")
+	public @ResponseBody LocalisationDto addLocalisation(@RequestBody LocalisationDto LocalisationDto) {
+		return iLocalisationService.addLocalisation(LocalisationDto);
 	}
 
 	@Override
-	public LocalisationDto updateLocalisation(long idLocalisation, LocalisationDto LocalisationDto) {
-		// TODO Auto-generated method stub
-		return null;
+	@PutMapping(value= "/localisation/update/{idLocalisation}",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "update localisation")
+	public @ResponseBody LocalisationDto updateLocalisation(@PathVariable long idLocalisation, @RequestBody LocalisationDto LocalisationDto) {
+		return iLocalisationService.updateLocalisation(idLocalisation, LocalisationDto);
 	}
 
 	@Override
-	public void deleteLocalisation(long idLocalisation) {
-		// TODO Auto-generated method stub
-
+	@DeleteMapping(value= "/localisation/delete/{idLocalisation}",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "delete localisation")
+	public void deleteLocalisation(@PathVariable long idLocalisation) {
+		iLocalisationService.deleteLocalisation(idLocalisation);
 	}
 
 	@Override
-	public LocalisationDto getLocalisation(long idLocalisation) {
+	@GetMapping(value= "/localisation/get/{idLocalisation}",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "get localisation")
+	public @ResponseBody LocalisationDto getLocalisation(@PathVariable long idLocalisation) {
 		// TODO Auto-generated method stub
-		return null;
+		return iLocalisationService.getLocalisation(idLocalisation);
 	}
 
 	@Override
-	public Set<LocalisationDto> getLocalisations(Long... idLocalisation) {
+	@GetMapping(value= "/localisation/getall/{idLocalisations}",consumes = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "get all localisation")
+	public @ResponseBody Set<LocalisationDto> getLocalisations(@PathVariable Long... idLocalisations) {
 		// TODO Auto-generated method stub
-		return null;
+		return iLocalisationService.getLocalisations(idLocalisations);
 	}
 
 }
