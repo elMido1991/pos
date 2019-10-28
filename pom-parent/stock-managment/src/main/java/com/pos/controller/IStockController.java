@@ -1,5 +1,9 @@
 package com.pos.controller;
 
-public interface IStockController {
+import com.pos.service.IEntrepotService;
+import com.pos.service.ILocalisationService;
+import com.pos.service.IStockService;
+
+public interface IStockController extends IEntrepotService,IStockService,ILocalisationService {
 
 }

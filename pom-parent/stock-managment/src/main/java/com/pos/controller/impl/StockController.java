@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.pos.controller.IEntrepotController;
+import com.pos.controller.IStockController;
 import com.pos.dao.model.dto.EntrepotDto;
 import com.pos.dao.model.dto.LocalisationDto;
 import com.pos.dao.model.dto.StockDto;
@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RequestMapping("/stock")
 @Controller
-public class EntrepotController implements IEntrepotController {
+public class StockController implements IStockController {
 	
 	@Autowired
 	private IEntrepotService iEntrepotService;
