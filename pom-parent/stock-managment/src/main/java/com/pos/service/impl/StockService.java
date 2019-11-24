@@ -12,6 +12,7 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import com.pos.dao.model.Stock;
@@ -20,6 +21,7 @@ import com.pos.dao.model.mappers.IStockMapper;
 import com.pos.dao.repository.IStockRepository;
 import com.pos.service.IStockService;
 
+@Service
 public class StockService implements IStockService {
 	
 	@Autowired

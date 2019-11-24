@@ -1,11 +1,14 @@
 package com.pos.dao.model.mappers.impl;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import com.pos.dao.model.Localisation;
 import com.pos.dao.model.dto.LocalisationDto;
 import com.pos.dao.model.mappers.ILocalisationMapper;
 
+
+@Service
 public class LocalisationMapper implements ILocalisationMapper {
 
 	@Override

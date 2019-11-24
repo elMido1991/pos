@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.pos.dao.model.Localisation;
 import com.pos.dao.model.dto.LocalisationDto;
@@ -12,6 +13,7 @@ import com.pos.dao.model.mappers.ILocalisationMapper;
 import com.pos.dao.repository.ILocalisationRepository;
 import com.pos.service.ILocalisationService;
 
+@Service
 public class LocalisationService implements ILocalisationService{
 
 	@Autowired

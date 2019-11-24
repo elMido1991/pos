@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.pos.dao.model.Entrepot;
 import com.pos.dao.model.dto.EntrepotDto;
@@ -12,6 +13,7 @@ import com.pos.dao.model.mappers.IEntrepotMapper;
 import com.pos.dao.repository.IEntrepotRepository;
 import com.pos.service.IEntrepotService;
 
+@Service
 public class EntrepotService implements IEntrepotService{
 
 	@Autowired

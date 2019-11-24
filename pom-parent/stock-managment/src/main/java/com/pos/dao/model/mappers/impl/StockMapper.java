@@ -1,11 +1,14 @@
 package com.pos.dao.model.mappers.impl;
 
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
 
 import com.pos.dao.model.Stock;
 import com.pos.dao.model.dto.StockDto;
 import com.pos.dao.model.mappers.IStockMapper;
 
+
+@Service
 public class StockMapper implements IStockMapper {
 
 	@Override
