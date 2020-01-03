@@ -17,11 +17,9 @@ public class ClientDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private long id;
-	private String designation;
-	private String description;
-	private float price;
-	private float quantity;
-	private String image;
+	private String label;
+	private String phoneNumber;
+	private String adress;
 	
 	
 }

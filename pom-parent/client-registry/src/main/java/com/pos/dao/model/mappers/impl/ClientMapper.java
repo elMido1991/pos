@@ -1,7 +1,6 @@
 package com.pos.dao.model.mappers.impl;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.pos.dao.model.Client;

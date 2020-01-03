@@ -1,8 +1,7 @@
 package com.pos.dao.model;
 
-import java.util.Set;
+import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -27,15 +26,14 @@ public class Categorie {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Column(name = "LIBELLE")
 	private String libelle;
 	
 	@OneToMany(
 	        mappedBy = "categorie",
-	        cascade = CascadeType.ALL,
 	        orphanRemoval = true,
-	        fetch = FetchType.LAZY
+	        fetch = FetchType.EAGER
 	    )
-	private Set<Article> articles;
+	private List<Article> articles;
 }

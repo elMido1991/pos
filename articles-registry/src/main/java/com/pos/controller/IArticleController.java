@@ -16,4 +16,5 @@ public interface IArticleController {
 	@ResponseBody ArticleDto getArticle(@PathVariable long id) throws Exception ;
 	@ResponseBody List<ArticleDto> getArticlesByPagination(@PathVariable int start,@PathVariable int end) throws Exception ;
 	@ResponseBody List<ArticleDto> getArticlesByPaginationAndSort(@PathVariable int start,@PathVariable int end, @PathVariable String sortby, @PathVariable String asc) throws Exception ;
+	@ResponseBody List<ArticleDto> getArticleByCategorieId(@PathVariable long id) throws Exception ;
 }

@@ -16,8 +16,9 @@ public class ArticleMapper implements IArticleMapper {
 	
 	public Article mapToEntity(ArticleDto articledto) throws Exception {
 		Article article = new Article();
+		
 		BeanUtils.copyProperties(articledto, article);
-		article.setCategorie(categorieMapper.mapToEntity(articledto.getCategorieDto()));
+		//article.setCategorie(categorieMapper.mapToEntity(articledto.getCategorieDto()));
 		return article;
 	}
 	
@@ -25,7 +26,7 @@ public class ArticleMapper implements IArticleMapper {
 	public ArticleDto mapToDto(Article article) throws Exception{
 		ArticleDto articledto = new ArticleDto();
 		BeanUtils.copyProperties(article, articledto);
-		articledto.setCategorieDto(categorieMapper.mapToDto(article.getCategorie()));
+		//articledto.setCategorieDto(categorieMapper.mapToDto(article.getCategorie()));
 		return articledto;
 	}
 	

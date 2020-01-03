@@ -1,7 +1,7 @@
 package com.pos.dao.model.dto;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,5 +20,5 @@ public class CategorieDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private long id;
 	private String libelle;
-	private Set<ArticleDto> articlesdto;
+	private List<ArticleDto> articlesdto;
 }

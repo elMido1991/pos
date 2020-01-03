@@ -22,14 +22,10 @@ public class Client {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	@Column(name = "DESIGNATION")
-	private String designation;
-	@Column(name = "DESCRIPTION")
-	private String description;
-	@Column(name = "PRICE")
-	private float price;
-	@Column(name = "QUANTITY")
-	private float quantity;
-	@Column(name = "IMAGE")
-	private String image;
+	@Column(name = "LABEL")
+	private String label;
+	@Column(name = "PHONE_NUMBER")
+	private String phoneNumber;
+	@Column(name = "ADRESS")
+	private String adress;
 }

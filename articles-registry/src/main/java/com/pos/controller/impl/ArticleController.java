@@ -73,6 +73,15 @@ public class ArticleController implements IArticleController {
 	public @ResponseBody List<ArticleDto> getArticlesByPaginationAndSort(@PathVariable int start,@PathVariable int end, @PathVariable String sortby, @PathVariable String asc) throws Exception {
 		return articleService.getAllArticlesByPaginationAndSorting(start, end,sortby,asc);
 	}
+
+
+	@Override
+	@GetMapping(value= "/find/categorie/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
+	@ApiOperation(value = "get articles by categorie id")
+	public @ResponseBody List<ArticleDto> getArticleByCategorieId(@PathVariable long id) throws Exception {
+		// TODO Auto-generated method stub
+		return articleService.getAllArticlesByCategorie(id);
+	}
 	
 	
 }

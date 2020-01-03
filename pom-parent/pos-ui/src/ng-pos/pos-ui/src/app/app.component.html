@@ -1,0 +1,62 @@
+
+<div class="wrapper">
+    
+        <div class="top_navbar">
+          
+          <div class="hamburger">   
+             <div class="one"></div>
+             <div class="two"></div>
+             <div class="three"></div>
+          </div>
+          <div class="top_menu">
+            <div class="logo">POS Tech</div>
+            <ul>
+              <li><a href="#">
+                <i class="fa fa-camera"></i></a></li>
+              <li><a href="#">
+                <i class="fa fa-bell"></i>
+                </a></li>
+              <li><a (click)="redirect()">
+                <i class="fa fa-user"></i>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="sidebar">
+            <ul>
+              <li><a routerLink="/home" routerLinkActive="active">
+                <span class="icon"><i class="fa fa-home fa-2x"></i></span>
+                <span class="title">Home</span></a></li>
+              <li><a routerLink="/sales" routerLinkActive="active">
+                <span class="icon"><i class="fa fa-shopping-cart fa-2x"></i></span>
+                <span class="title">Sales</span>
+                </a></li>
+              <li><a routerLink="/cash" routerLinkActive="active">
+                <span class="icon"><i class="fa fa-money fa-2x"></i></span>
+                <span class="title">Cash</span>
+                </a></li>
+              <li><a routerLink="/inventory" routerLinkActive="active">
+                <span class="icon"><i class="fa fa-line-chart fa-2x"></i></span>
+                <span class="title">Inventory</span>
+                </a></li>
+              <li><a routerLink="/settings" routerLinkActive="active">
+                <span class="icon"><i class="fa fa-cog fa-2x"></i></span>
+                <span class="title">Settings</span>
+                </a></li>
+               <li><a routerLink="/users" routerLinkActive="active">
+                    <span class="icon"><i class="fa fa-users fa-2x"></i></span>
+                    <span class="title">Users</span>
+                    </a></li>
+                <li><a routerLink="/products" routerLinkActive="active">
+                    <span class="icon"><i class="fa fa-shopping-basket fa-2x"></i></span>
+                    <span class="title">Products</span>
+                    </a></li>     
+          </ul>
+        </div>
+        
+        <div class="main_container">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+     

@@ -2,7 +2,6 @@ package com.pos.dao.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -24,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	@Column(name = "DESIGNATION")
 	private String designation;
 	@Column(name = "DESCRIPTION")
@@ -35,7 +34,7 @@ public class Article {
 	private float quantity;
 	@Column(name = "IMAGE")
 	private String image;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "ART_CATEGORIE_ID")
+	@JoinColumn(name = "CATEGORIE_ID", referencedColumnName = "ID")
+	@ManyToOne
 	private Categorie categorie;
 }

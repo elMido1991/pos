@@ -85,4 +85,22 @@ public class ArticleService implements IArticleService {
 		return optionalarticle.isPresent()? articleMapper.mapToDto(optionalarticle.get()):null;
 	}
 
+
+	public List<ArticleDto> getAllArticlesByCategorie(long id) {
+		// TODO Auto-generated method stub
+		List<ArticleDto> articleDtos = new ArrayList<>();
+		List<Article> articles = articleRepository.findArticleByCategorie(id);
+		
+			articles.forEach(x->{
+				try {
+					articleDtos.add(articleMapper.mapToDto(x));
+					}
+				catch (Exception e) {
+					e.printStackTrace();
+					}
+		});
+		
+		return articleDtos;
+	}
+
 }

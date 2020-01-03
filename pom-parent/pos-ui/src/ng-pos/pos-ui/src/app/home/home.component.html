@@ -1,0 +1,84 @@
+<div class="row">
+
+    <div id="categories" class="">
+            <ul class="boxCate">
+                    <li *ngFor="let category of categories" (click)="onSelectCategory(category)">
+                            <span class="badge">{{category._id}}</span> {{category._label}}
+                          </li>
+                  </ul>
+        
+           
+    </div>
+    <div id="products"  class="pull_right">
+        <div class="row" style="width:100%" *ngIf="selectedCategory" >
+                <div id="productLine" class="border border-primary card  ml-2 mb-3" style="width: 23%" *ngFor="let product of selectedCategory.products" (click)="onSelectProduct(product)">
+                        <img class="card-img-top border-bottom border-primary" style="width: 100%;height: 95px;" [src]="product._img" alt="Card image cap">
+                        <div class="card-body" style="padding: 0.5rem">
+                          <p class="card-text"><b>{{ product._label }}</b></p> {{ product._price }} Dh
+                        </div>
+                </div>
+        </div>
+    </div>
+    <div id="products_sales" >
+        <div class="table100 ver1 m-b-110">
+                <div class="row" class="table100-head">
+                    <table>
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="cell100 column4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                <th class="cell100 column3">Label</th>
+                                <th class="cell100 column1">Price</th>
+                                <th class="cell100 column1">Quantity</th>
+                                <th class="cell100 column1">SubTotal</th>
+                                
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <div class="row" class="table100-body js-pscroll">
+                    <table>
+                        <tbody>
+                            <tr *ngFor="let selectedProduct of selectedProducts" class="row100 body">
+                                    <td class="cell100 column4">
+                                            <button type="button" (click)="onMinimzeProduct(selectedProduct)">
+                                                <i class="fa fa-minus"   aria-hidden="true"></i>
+                                            </button>
+                                            &nbsp;
+                                            <button type="button" (click)="onSelectProduct(selectedProduct)" >
+                                                <i class="fa fa-plus"  aria-hidden="true"></i>
+                                            </button>
+                                            &nbsp;
+                                            <button type="button" (click)="onDeleteProduct(selectedProduct)">
+                                                <i class="fa fa-trash-o"  aria-hidden="true"></i>
+                                            </button>
+                                        </td>
+                                <td class="cell100 column3">{{selectedProduct._label}}</td>
+                                <td class="cell100 column1">{{selectedProduct._price}}</td>
+                                <td class="cell100 column1">{{selectedProduct._quantity}}</td>
+                                <td class="cell100 column1">{{selectedProduct._price * selectedProduct._quantity}}</td>
+                                
+                            </tr>
+
+                           
+
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+                <div>
+                    <p style="padding-bottom:45px;">
+                        
+                        <span class="pull-right" style="padding-left:20px;width: 30%"><b> Dhs</b></span>
+                        <span class="pull-right" style="padding-left:20px;width: 20%"><b> {{getSum()}} </b></span>
+                        <span class="pull-right" style="padding-left:20px;width: 20%"><b> Total : </b></span> 
+                    </p>   
+                    <button class="btn btn-primary" style="width: 100%;height:90px;border-radius: 0px 0px 0px 0px;" type="button">
+                            <i class="fa fa-print fa-2x"  aria-hidden="true"></i> <h4>Print</h4>
+                    </button>
+                </div>
+            </div>
+    </div>
+</div>
+ 
